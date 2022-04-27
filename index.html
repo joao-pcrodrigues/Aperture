@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aperture Studios</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS/estilo.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="JS/script.js"></script>
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            alert("Bem-vindo");
+        }, 5000);
+    </script>
+
+    <script>
+        /* === RSS FEED === */
+        var url = 'https://petapixel.com/feed/'; //Aqui definimos a vaeriavel url, a qual diz respeito a URL do RSS feed que queremos ver
+
+        $.ajax({
+            url: 'https://api.rss2json.com/v1/api.json?rss_url=' + url,
+
+            type: 'GET',
+
+            success: function (data) {
+                objeto_json = eval(data);
+
+                //As próximas linhas de código dizem-nos como as noticias do RSS Feed irão aprecer
+                var frase = "";
+                for (i = 0; i < objeto_json.items.length; i++) {
+                    frase = frase + "Título: <b>" + objeto_json.items[i].title + "</b> <br>";
+                    frase = frase + objeto_json.items[i].description + "</br> </br>";
+                }
+
+                $('#feed').html(frase);
+            },
+
+            error: function (xhr, status) {
+                alert("Ocorreu um erro!");
+            }
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <!-- === NAV BAR === -->
+    <nav>
+        <a href=""><img src="img/aperture.png" alt=""><span>Aperture</span><span id="bold">Studios</span></a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="orcamento.html">Orçamento</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+        </ul>
+    </nav>
+    <!-- === END NAV BAR === -->
+
+    <!-- === CAIXA CENTRO === -->
+    <div class="row" id="row-index">
+        <div id="centro-index" class="col-6">
+            <div id="texto-index">
+                <h1>Capturamos momentos, <br>
+                    criamos memórias.</h1>    
+                <br><br>
+    
+                <p>O ApertureStudios é um estúdio de fotografia especializado em transformar os seus momentos mágicos em lindas recordações. <br> <br>
+                    Os nossos profissionais contam com mais de 10 anos de experiência na área, desde cobertura de eventos e sessões fotográficas até campanhas publicitárias.</p>
+    
+                <br>
+    
+                <a href="contactos.html"><button id="saber">Saber mais</button></a>
+            </div>
+        </div>
+
+        <div id="carousel" class="carousel slide carousel-fade col-6" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="img/IMG_0685.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="img/DSC07902.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="img/IMG_1054.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === END CENTRO === -->
+
+
+    
+
+    <!-- === CAIXA RSS FEED === -->
+
+    
+    <h4>Fique dentro das novidades da arte da fotografia através do nosso feed</h4>
+    <div id="feed">
+
+    </div>
+    <!-- === END CAIXA RSS FEED === -->
+
+
+
+    <!-- === FOOTER === -->
+    <div class="container">
+        <footer class="d-flex align-items-center py-4 my-3" style="border-top: 1px solid #00acc1;">
+          <p class="col-md-4 mb-0" style="color: #00acc1;">criado por João Rodrigues, 2022 ©</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="img/logo.PNG" alt="">
+      
+          <ul class="nav justify-content-end" style="display: inline-block;">
+            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #00acc1;">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #00acc1;">Portfólio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #00acc1;">Orçamento</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #00acc1;">Contactos</a></li>
+          </ul>
+        </footer>
+      </div>
+    <!-- === END FOOTER === -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

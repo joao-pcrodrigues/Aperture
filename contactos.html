@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="CSS/estilo.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script type="text/javascript" src="JS/script.js"></script>
+
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4&callback=myMap"></script>
+</head>
+
+<body onload="carregarmapa()">
+  <!-- === NAV BAR === -->
+  <nav>
+    <a href=""><img src="img/aperture.png" alt=""><span>Aperture</span><span id="bold">Studios</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="orcamento.html">Orçamento</a></li>
+      <li><a href="contactos.html" class="active">Contactos</a></li>
+    </ul>
+  </nav>
+  <!-- === END NAV BAR === -->
+
+  <!-- CAIXA CENTRAL -->
+  <div id="contactos">
+    <p>Preencha o formulário abaixo para obter mais informações acerca dos nossos serviços, orçamentos ou projetos: </p>
+    <br>
+
+    <form action="" name="contacto">
+      <table>
+        <tbody>
+          <tr>
+            <td>Nome: </td>
+            <td><input type="text" name="nomeCon"></td>
+          </tr>
+          <tr>
+            <td>Apelido: </td>
+            <td><input type="text" name="apelidoCon"></td>
+          </tr>
+          <tr>
+            <td>Telemóvel: </td>
+            <td><input type="text" name="telCon" maxlength="9"></td>
+          </tr>
+          <tr>
+            <td>Email: </td>
+            <td><input type="email" name="emailCon"></td>
+          </tr>
+          <tr>
+            <td>Data: </td>
+            <td><input type="data" name="dataCon"></td>
+          </tr>
+          <tr>
+            <td valign="top">Motivo do contacto: </td>
+            <td><textarea rows="10" cols="50" placeholder=" Deixe aqui a sua mensagem!"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+      <input type="button" id="enviar" name="envio" value="Enviar" onclick="validarCon(this.form);" />
+    </form>
+
+    <br>
+  </div>
+
+  <br> <br> <br>
+
+  <h5> Gostaria de fazer uma visita ao nosso estúdio? <br> Clique no botão abaixo para saber como chegar até nós!</h5>
+  <button id="loc" onclick="calcularRota()">Localização</button>
+
+  <br> <br> <br> <br>
+
+  <div id="mapa"></div>
+
+  <br> <br> <br> <br>
+
+
+  <!-- END CAIXA CENTRAL -->
+
+
+
+
+  <!-- === FOOTER === -->
+  <div class="container">
+    <footer class="d-flex align-items-center py-4 my-3" style="border-top: 1px solid #00acc1;">
+      <p class="col-md-4 mb-0" style="color: #00acc1;">criado por João Rodrigues, 2022 ©</p>
+
+      <a href="/"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <img src="img/logo.PNG" alt="">
+
+        <ul class="nav justify-content-end" style="display: inline-block;">
+          <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #00acc1;">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #00acc1;">Portfólio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #00acc1;">Orçamento</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2" style="color: #00acc1;">Contactos</a></li>
+        </ul>
+    </footer>
+  </div>
+  <!-- === END FOOTER === -->
+
+</body>
+
+</html>

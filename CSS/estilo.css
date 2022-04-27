@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+body {
+    background: white;
+}
+
+@font-face {
+    font-family: Dolce Vita;
+    src: url(../Dolce\ Vita.ttf);
+}
+
+@font-face {
+    font-family: dafont;
+    src: url(../LearningCurve.ttf);
+}
+
+
+/* === INDEX === */
+
+nav {
+    display: block;
+    margin: 0;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+    top: fixed;
+    background: white;
+    z-index: 1;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+nav span {
+    float: left;
+    line-height: 50px;
+    font-family: Dolce Vita;
+    font-size: 25px;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    text-decoration: none;
+    margin: 0px 5px;
+    color: black;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 7px 15px;
+    transition: ease 0.3s;
+    line-height: 50px;
+}
+
+nav li a:hover {
+    border: 1px solid #00acc1;
+    transition: ease 0.3s;
+    color: inherit;
+}
+
+nav .active,
+nav .active:hover {
+    border: 1px solid #00acc1;
+    background-color: #00acc1;
+    color: white;
+}
+
+
+.row {
+    margin: 0;
+}
+
+#centro-index {
+    display: inline-block;
+    background: #00acc1;
+    padding: 0 20px;
+    margin-top: 56px;
+}
+
+#centro-index h1,
+#centro-index p {
+    color: white;
+}
+
+#centro-index h1 {
+    font-family: dafont;
+    font-size: 60px;
+}
+
+#texto-index {
+    padding: 0;
+    margin: 0;
+    margin-top: calc(50% - 56px);
+    transform: translateY(-25%);
+}
+
+#texto-index p{
+    font-size: 17px;
+}
+
+#carousel {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+    z-index: -1;
+}
+
+#saber {
+    background: #00acc1;
+    border: 1px solid white;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: ease 0.3s;
+}
+
+#saber:hover {
+    background: white;
+    color: #00acc1;
+    transition: ease 0.3s;
+}
+
+h4{
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+#feed {
+    height: 600px;
+    overflow: scroll;
+    margin: 20px;
+}
+
+/* === END INDEX === */
+
+
+
+/* === PORTFOLIO === */
+#portfolio {
+    padding-top: 100px;
+}
+
+#portfolio p {
+    color: #00acc1;
+    font-family: dafont;
+    font-size: 30px;
+}
+
+#portfolio span{
+    font-size: 20px;
+}
+/* === END PORTFOLIo === */
+
+
+
+
+
+/* === ORÇAMENTO === */
+#centro-orc {
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+#tit-orc{
+    font-size: 25px;
+    color: #00acc1;
+}
+
+#p-orc {
+    font-size: 12px;
+}
+
+#enviar{
+    background: white;
+    border: 1px solid #00acc1;
+    padding: 10px 15px;
+    color: #00acc1;
+    border-radius: 25px;
+    font-size: 17px;
+    transition: ease 0.3s;
+}
+
+#enviar:hover {
+    background: #00acc1;
+    color: white;
+    transition: ease 0.3s;
+}
+
+#tel-orc{
+    width: 100px;
+}
+
+#email-orc{
+    width: 250px;
+}
+
+#orcamento{
+    text-align: end;
+    width: 100px;
+}
+
+#prazo{
+    width: 30px;
+}
+/* === END ORÇAMENTO === */
+
+
+/* === CONTACTOS === */
+#mapa {
+    height: 400px;
+}
+
+#contactos {
+    padding-top: 100px;
+    text-align: center;
+}
+
+#contactos td{
+    padding-top: 5px;
+    text-align: start;
+}
+
+#contactos form{
+    display: inline-block;
+}
+
+h5{
+    padding-left: 20px;
+}
+
+#loc{
+    margin-left: 20px;
+    background: white;
+    border: 1px solid #00acc1;
+    padding: 10px 15px;
+    color: #00acc1;
+    border-radius: 25px;
+    font-size: 17px;
+    transition: ease 0.3s;
+}
+
+#loc:hover {
+    background: #00acc1;
+    color: white;
+    transition: ease 0.3s;
+}
+/* === END CONTACTOS === */
+
+
+
+
+
+
+@media (max-width: 800px) {
+    nav {
+        text-align: center;
+    }
+
+    ul {
+        margin-top: 10px;
+    }
+
+    #row-index {
+        display: block;
+    }
+
+    #centro-index {
+        width: 100%;
+        text-align: center;
+    }
+
+    #carousel {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    nav img,
+    nav span {
+        float: none;
+        margin-bottom: none;
+        padding-bottom: none;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    #portfolio {
+        transform: translateY(50px);
+    }
+
+    #contactos {
+        padding-top: 150px;
+    }
+}
