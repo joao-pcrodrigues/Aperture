@@ -1,5 +1,11 @@
 # Aperture Studios
 
-This project was created under my javascript's web development course module and it consists in creating a fictional photography studio using the skills we learned in Javascript, JQuery, Google Maps API.
+This website was created under my development course's javascript module which consisted in the creation of a fictional photograpgy studio by appying the skills we learned Ttroughout that module.
 
-I used HTML, CSS, Bootstrap, JQuery and Google Maps API.
+
+This project was built with:
+- HTML
+- CSS
+- Bootstrap
+- Javascript
+- Google Maps API
